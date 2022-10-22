@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "7ecce4ee-9b88-4f5a-967d-217b1044919a",
+		"name": "Autenticação",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NODE",
+			"item": [
+				{
+					"name": "Teste",
+					"item": [
+						{
+							"name": "JWT rota apenas Logado",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6InBldGVyIiwiaXNfc3VwZXJ1c2VyIjp0cnVlLCJyb2xlIjoxLCJpYXQiOjE2NjMyMDcwMzF9.oRS0Krj2vd20NOUjJKsP77VIzSuunDEHT6_OfY_GELg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/teste/apenasJwt",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"teste",
+										"apenasJwt"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJ1c2VybmFtZSI6InBldGVyIiwiaXNfc3VwZXJ1c2VyIjp0cnVlLCJyb2xlIjoxLCJpYXQiOjE2NjMyMDcwMzF9.oRS0Krj2vd20NOUjJKsP77VIzSuunDEHT6_OfY_GELg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/teste/getAllUsers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"teste",
+										"getAllUsers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"peter\",\r\n    \"password\": \"pbkdf2_sha256$320000$YT7f7JM13vZpLOgqLYrRKL$FgecuYuoX/po67qG6GSUUnLQgVM14uJi9w6QaLVY1QE=\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cadastrar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"hendrick3\",\r\n    \"password\": \"hendrick3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
